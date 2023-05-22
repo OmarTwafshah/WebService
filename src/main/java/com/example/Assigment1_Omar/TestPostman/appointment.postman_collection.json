@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "2449ebfe-92a4-43d4-a0aa-4518cb7e3494",
+		"name": "appointment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11282347"
+	},
+	"item": [
+		{
+			"name": "insert appointment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"appointmentName\":\"Hammam appointment\",\r\n    \"appointmentType\":\"5 day appointment\",\r\n    \"appointmentDate\":\"09-05-2023\",\r\n    \"appointmentDescription\":\"nothing\",\r\n    \"patientId\":2,\r\n    \"doctorId\":2,\r\n    \"roomId\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/appointment/insert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"appointment",
+						"insert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all appointment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/appointment/getall",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"appointment",
+						"getall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get appointment by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/appointment/get?id=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"appointment",
+						"get"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update appointment",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"appointmentId\":2,\r\n    \"appointmentName\":\"Hammam appointment new update\",\r\n    \"appointmentDate\":\"09-04-2023\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/appointment/Update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"appointment",
+						"Update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete appoinment",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/appointment/delete?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"appointment",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

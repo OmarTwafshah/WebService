@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "81c2992b-a21f-48f3-a311-7ae1e25291f6",
+		"name": "room",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11282347"
+	},
+	"item": [
+		{
+			"name": "insert room",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"roomFloor\":4,\r\n    \"roomCapacity\":6,\r\n    \"roomVip\":false,\r\n    \"roomFull\":true,\r\n    \"roomPricePerday\":250.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/room/insert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"room",
+						"insert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all room",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/room/getall",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"room",
+						"getall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get room by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/room/get?id=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"room",
+						"get"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update room",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"roomId\":4,\r\n    \"roomCapacity\":5,\r\n    \"roomVip\":false,\r\n    \"roomFull\":false,\r\n    \"roomPricePerday\":300.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/room/Update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"room",
+						"Update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete room",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/room/delete?id=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"room",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
